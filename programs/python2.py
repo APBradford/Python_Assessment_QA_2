@@ -52,9 +52,16 @@ def one(string):
     # What operator will give you the remainder?
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
-
 def two(num):
-    return
+    #Loop required to start from 2 to work, so need to assert 2 seperately
+    if num == 2:
+        return True
+    else:
+        for i in range(2,num):
+            if num % i == 0:
+                return False
+            else:
+                return True
 
     # <QUESTION 3>
 
