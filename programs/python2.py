@@ -202,7 +202,14 @@ def six(string):
 
 
 def seven(a, b, c):
-    return
+    lst = [a, b, c]
+    lst.sort()
+    first = int(lst[1]) - int(lst[0])
+    second = int(lst[2]) - int(lst[1])
+    if first == second:
+        return True
+    else:
+        return False
 
     # <QUESTION 8>
 
@@ -221,7 +228,12 @@ def seven(a, b, c):
 
 
 def eight(string, num):
-    return
+    midIndex = int(round(len(string)/2))
+    sideIndex= (num-1)/2
+    start = midIndex - sideIndex
+    stop = midIndex + sideIndex
+    new = string[:int(start)] + string[int(stop)+1:]
+    return new
 
     # <QUESTION 9>
 
