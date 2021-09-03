@@ -125,7 +125,7 @@ def four(string1, string2):
         index2 += 2
     final = "".join(newlst)
     return final 
-    
+
     # <QUESTION 5>
 
     # Write a function to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
@@ -142,7 +142,17 @@ def four(string1, string2):
 
 
 def five():
-    return
+    lst = []
+    count = 1
+    while count < 6:
+        number = random.randint(100, 201)
+        if number % 2 == 0:
+            lst.append(number)
+            count += 1
+        else:
+            continue
+
+    return lst
 
     # <QUESTION 6>
 
@@ -162,7 +172,12 @@ def five():
 
 
 def six(string):
-    return
+    string = string.lower()
+    result = string.find("py", -2)
+    if result == -1:
+        return False
+    else:
+        return True
 
     # <QUESTION 7>
 
