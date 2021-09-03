@@ -77,9 +77,12 @@ def two(num):
     # <HINT>
     # What happens if you multiply a string by a number?
 
-
 def three(a):
-    return
+    total = 0
+    for i in range(4):
+        newStr = str(a) + (str(a)*i)
+        total += int(newStr)
+    return total
 
     # <QUESTION 4>
 
@@ -109,8 +112,20 @@ def three(a):
 
 
 def four(string1, string2):
-    return
-
+    lst1 = list(string1)
+    lst2 = list(string2)
+    newlst = []
+    index = 0
+    index2 = 1
+    for i in lst1:
+        newlst.insert(index, i)
+        index += 2
+    for j in lst2:
+        newlst.insert(index2, j)
+        index2 += 2
+    final = "".join(newlst)
+    return final 
+    
     # <QUESTION 5>
 
     # Write a function to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
