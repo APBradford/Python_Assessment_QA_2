@@ -252,7 +252,18 @@ def eight(string, num):
 
 def nine(string1, string2):
     # make sure string1 is the shortest of the two
-    return
+    lst = [string1, string2]
+    sortlst = sorted(lst, key=len)
+    first = str(sortlst[0])
+    second = str(sortlst[1])
+    count = 0
+    for i in first:
+        if i in second:
+            count += 1
+    if count == len(first):
+        return True
+    else:
+        return False
 
     # <QUESTION 10>
 
@@ -271,4 +282,8 @@ def nine(string1, string2):
 
 
 def ten(a, b):
-    return
+    array = [[0 for x in range(a)] for y in range(b)]
+    for row in range(b):
+        for column in range(a):
+            array[row][column] = row*column
+    return array
