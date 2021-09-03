@@ -32,7 +32,10 @@ import random
 
 
 def one(string):
-    return
+    newStr = ""
+    for i in string:
+        newStr += i*3
+    return newStr
 
     # <QUESTION 2>
 
